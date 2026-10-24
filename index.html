@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hello Sibby ❤️</title>
+<title>For Sibby ❤️</title>
 
 <style>
 * {
@@ -14,67 +14,52 @@
 body {
   margin: 0;
   min-height: 100vh;
-  font-family: "Trebuchet MS", sans-serif;
-  background: linear-gradient(135deg, #fff0f5, #fff8f0, #fce4ec);
-  color: #65434e;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow-x: hidden;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #fff0f3, #f8e8ff);
+  color: #573d50;
   text-align: center;
+  overflow-x: hidden;
 }
 
 .page {
   display: none;
-  width: 100%;
-  max-width: 650px;
-  padding: 28px 20px;
-  animation: appear 0.7s ease;
+  min-height: 100vh;
+  padding: 40px 20px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .page.active {
-  display: block;
+  display: flex;
 }
 
 h1 {
-  font-size: clamp(2rem, 8vw, 3.3rem);
-  margin-bottom: 18px;
+  font-size: 2.2rem;
+  margin-bottom: 15px;
 }
 
 p {
-  font-size: clamp(1.15rem, 4vw, 1.5rem);
+  font-size: 1.15rem;
   line-height: 1.6;
-}
-
-.hello {
-  color: #e00024;
+  max-width: 500px;
 }
 
 button {
-  border: none;
-  padding: 14px 27px;
-  margin: 10px 6px;
-  border-radius: 30px;
-  font-size: 1.05rem;
-  font-weight: bold;
-  cursor: pointer;
-  background: #e9a0b5;
+  background: #d96b91;
   color: white;
-  box-shadow: 0 5px 12px #d88da644;
+  border: none;
+  padding: 13px 25px;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin: 12px 8px;
   transition: transform 0.2s, background 0.2s;
 }
 
 button:hover {
-  transform: scale(1.07);
-  background: #d97998;
-}
-
-.no-btn {
-  background: #aaa0aa;
-}
-
-.no-btn:hover {
-  background: #887887;
+  background: #c94f7a;
+  transform: scale(1.05);
 }
 
 .art {
@@ -82,30 +67,30 @@ button:hover {
   margin: 20px 0;
 }
 
-.heart {
-  position: fixed;
-  bottom: -30px;
-  animation: floatUp 4s linear forwards;
-  pointer-events: none;
-  z-index: 5;
+.small {
+  font-size: 0.95rem;
 }
+
+/* Animated cars */
 
 .road {
   position: relative;
-  height: 180px;
-  margin: 25px -10px;
+  width: 100%;
+  max-width: 450px;
+  height: 165px;
+  margin: 20px auto;
   overflow: hidden;
-  background: #e8dfe2;
+  background: #e7dce7;
   border-radius: 18px;
 }
 
-.road::after {
+.road::before {
   content: "";
   position: absolute;
+  top: 50%;
   left: 0;
-  right: 0;
-  top: 112px;
-  border-top: 4px dashed white;
+  width: 100%;
+  border-top: 3px dashed #fff;
 }
 
 .car {
@@ -144,51 +129,59 @@ button:hover {
   background: #bd3447;
 }
 
-.car.lilac {
+.car.black {
   top: 100px;
-  background: #a18ac5;
+  background: #222222;
   animation-delay: -2.5s;
   animation-direction: reverse;
 }
 
 .audi {
   position: absolute;
-  z-index: 3;
-  top: 5px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 15px;
-  font-weight: bold;
+  top: 2px;
+  left: 48px;
   color: white;
-  white-space: nowrap;
+  font-size: 8px;
+  font-weight: bold;
+  z-index: 3;
 }
 
 .rings {
-  letter-spacing: -4px;
-  font-size: 16px;
-  margin-right: 7px;
+  display: block;
+  font-size: 12px;
+  letter-spacing: -3px;
+  line-height: 12px;
 }
 
 @keyframes drive {
-  from { left: -180px; }
-  to { left: 110%; }
+  from {
+    left: -180px;
+  }
+  to {
+    left: calc(100% + 180px);
+  }
 }
 
-@keyframes appear {
-  from { opacity: 0; transform: translateY(12px); }
-  to { opacity: 1; transform: translateY(0); }
+/* Floating hearts */
+
+.heart {
+  position: fixed;
+  bottom: -50px;
+  pointer-events: none;
+  z-index: 10;
+  animation: floatHeart 5s linear forwards;
 }
 
-@keyframes floatUp {
-  from { transform: translateY(0) rotate(0); opacity: 1; }
-  to { transform: translateY(-110vh) rotate(35deg); opacity: 0; }
+@keyframes floatHeart {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-110vh) rotate(25deg);
+    opacity: 0;
+  }
 }
-
-.small {
-  font-size: 1rem;
-  color: #997681;
-}
-
 </style>
 </head>
 
@@ -197,9 +190,9 @@ button:hover {
 <!-- PAGE 1 -->
 <section class="page active" id="page1">
   <div class="art">💌</div>
-  <h1 class="hello">Hello Sibby ❤️</h1>
+  <h1>Hello Sibby ❤️</h1>
   <p>I have something to tell you...</p>
-  <button onclick="showPage(2)">Click me 💗</button>
+  <button onclick="showPage(2)">Continue 💗</button>
 </section>
 
 <!-- PAGE 2 -->
@@ -210,13 +203,13 @@ button:hover {
     <div class="car red">
       <span class="audi"><span class="rings">○○○○</span>AUDI</span>
     </div>
-    <div class="car lilac">
+    <div class="car black">
       <span class="audi"><span class="rings">○○○○</span>AUDI</span>
     </div>
   </div>
 
   <p>I know I've been a little crazy on you 🥺</p>
-  <button onclick="showPage(3)">Click me 💕</button>
+  <button onclick="showPage(3)">Next 💌</button>
 </section>
 
 <!-- PAGE 3 -->
@@ -225,10 +218,13 @@ button:hover {
   <h1>I apologise...</h1>
   <p>I know the hulk in me acted up, I'm not proud of it 😒</p>
   <p class="small">I don't want things to be this way..</p>
-  <button onclick="showPage(4)">Click me 🍑</button>
+  <button onclick="showPage(4)">Continue 🥺</button>
 </section>
 
-<!-- PAGE 4: APPRECIATION -->
+<!-- PAGE 4 -->
+<section class="page" id="page4">
+  <h1>A little appreciation 💗</h1>
+
   <div class="road">
     <div class="car red">
       <span class="audi"><span class="rings">○○○○</span>AUDI</span>
@@ -237,41 +233,41 @@ button:hover {
       <span class="audi"><span class="rings">○○○○</span>AUDI</span>
     </div>
   </div>
-<section class="page" id="page4">
+
   <div class="art">🫰💗</div>
   <p>I know you're trying your best and I appreciate all your efforts</p>
-  <button onclick="showPage(5)">Click me💋</button>
+  <button onclick="showPage(5)">Next 🥹</button>
 </section>
 
-<!-- PAGE 5: FRIENDSHIP QUESTION -->
+<!-- PAGE 5 -->
 <section class="page" id="page5">
   <div class="art">🥺💗</div>
   <h1>I miss you babayy</h1>
   <p>Can we please be friends again?🥺</p>
 
-  <button onclick="happyEnding()">Yes 💗</button>
-  <button onclick="showPage(6)">No 💔</button>
+  <div>
+    <button onclick="happyEnding()">Yes 💗</button>
+    <button onclick="showPage(6)">No 💔</button>
+  </div>
 </section>
 
-<!-- PAGE 6: SAD BUNNY -->
+<!-- PAGE 6 -->
 <section class="page" id="page6">
   <div class="art">🥺</div>
   <h1>Oh no...</h1>
-  <p style="font-size: 1.4rem;">
-    Fatima doesn't deserve this 💔
-  </p>
+  <p>Fatima doesn't deserve this 💔</p>
   <p>This is not fair!!!</p>
   <button onclick="showPage(5)">Try again? 🥹</button>
-  <p class="small"> stop being mean!</p>
+  <p>stop being mean!</p>
   <div class="art">😿</div>
 </section>
 
-<!-- PAGE 7: HAPPY ENDING -->
+<!-- PAGE 7 -->
 <section class="page" id="page7">
   <div class="art">💕🐰</div>
-  <h1> Hehehe❤️</h1>
-  <p>Now you can call me </p>
-  <p>love you xxx</p>
+  <h1>Hehehe❤️</h1>
+  <p>Now you can call me</p>
+  <h1>love you xxx</h1>
   <div class="art">💋😘</div>
   <button onclick="showPage(1)">Start again 🔄</button>
 </section>
@@ -283,7 +279,11 @@ function showPage(number) {
   });
 
   document.getElementById("page" + number).classList.add("active");
-  window.scrollTo({ top: 0, behavior: "smooth" });
+
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
 
   if (number === 7) {
     makeHearts();
@@ -292,7 +292,6 @@ function showPage(number) {
 
 function happyEnding() {
   showPage(7);
-  makeHearts();
 }
 
 function makeHearts() {
@@ -300,8 +299,12 @@ function makeHearts() {
 
   for (let i = 0; i < 24; i++) {
     const heart = document.createElement("div");
+
     heart.className = "heart";
-    heart.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+    heart.textContent = emojis[
+      Math.floor(Math.random() * emojis.length)
+    ];
+
     heart.style.left = Math.random() * 100 + "vw";
     heart.style.fontSize = (18 + Math.random() * 25) + "px";
     heart.style.animationDelay = (Math.random() * 2) + "s";
