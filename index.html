@@ -228,30 +228,38 @@ button:hover {
   <button onclick="showPage(4)">Click me 🍑</button>
 </section>
 
-<!-- PAGE 4: FRIENDSHIP QUESTION -->
+<!-- PAGE 4: APPRECIATION -->
 <section class="page" id="page4">
+  <div class="art">🫰💗</div>
+  <p>I know you're trying your best and I appreciate all your efforts 🫰</p>
+  <button onclick="showPage(5)">Click me 💕</button>
+</section>
+
+<!-- PAGE 5: FRIENDSHIP QUESTION -->
+<section class="page" id="page5">
   <div class="art">🥺💗</div>
   <h1>I miss you babayy</h1>
   <p>Can we please be friends again?🥺</p>
 
   <button onclick="happyEnding()">Yes 💗</button>
-  <button onclick="showPage(5)">No 💔</button>
+  <button onclick="showPage(6)">No 💔</button>
 </section>
 
-<!-- PAGE 5: SAD BUNNY -->
-<section class="page" id="page5">
+<!-- PAGE 6: SAD BUNNY -->
+<section class="page" id="page6">
   <div class="art">🥺</div>
   <h1>Oh no...</h1>
   <p style="font-size: 1.4rem;">
     Fatima doesn't deserve this 💔
   </p>
   <p>This is not fair!!!</p>
-  <button onclick="showPage(4)">Try again? 🥹</button>
+  <button onclick="showPage(5)">Try again? 🥹</button>
   <p class="small"> stop being mean!</p>
+  <div class="art">😿</div>
 </section>
 
-<!-- PAGE 6: HAPPY ENDING -->
-<section class="page" id="page6">
+<!-- PAGE 7: HAPPY ENDING -->
+<section class="page" id="page7">
   <div class="art">💕🐰</div>
   <h1> Hehehe❤️</h1>
   <p>Now you can call me </p>
@@ -269,13 +277,13 @@ function showPage(number) {
   document.getElementById("page" + number).classList.add("active");
   window.scrollTo({ top: 0, behavior: "smooth" });
 
-  if (number === 6) {
+  if (number === 7) {
     makeHearts();
   }
 }
 
 function happyEnding() {
-  showPage(6);
+  showPage(7);
   makeHearts();
 }
 
