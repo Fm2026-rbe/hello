@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hello Sibby 💗</title>
+<style>
+:root{--pink:#ffe9ef;--rose:#f7b8c8;--ink:#503b45;--red:#e53945;--cream:#fffaf8}
+*{box-sizing:border-box}body{margin:0;min-height:100vh;display:grid;place-items:center;background:linear-gradient(145deg,#fff7f8,#fce5eb);font-family:ui-rounded,"Trebuchet MS",system-ui,sans-serif;color:var(--ink);overflow:hidden}
+.card{width:min(92vw,520px);min-height:570px;padding:34px 24px 28px;border:1px solid #ffffffc9;border-radius:30px;background:#fffdfceF;box-shadow:0 18px 55px #b86d8520;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;position:relative;overflow:hidden}
+.screen{display:none;width:100%;animation:appear .45s ease}.screen.active{display:flex;flex-direction:column;align-items:center;gap:22px}.hello{font-size:clamp(2.6rem,10vw,4rem);color:var(--red);font-weight:900;line-height:1.05;letter-spacing:-2px}.message{font-size:clamp(1.45rem,5vw,2rem);font-weight:750;line-height:1.35;max-width:390px}.sub{font-size:1rem;color:#9b7885}.btn{border:0;border-radius:999px;padding:14px 27px;background:#e98ba7;color:white;font-size:1.05rem;font-weight:800;box-shadow:0 6px 0 #ce6c8b;cursor:pointer;transition:transform .15s,box-shadow .15s}.btn:hover{transform:translateY(-2px);box-shadow:0 8px 0 #ce6c8b}.btn:active{transform:translateY(3px);box-shadow:0 3px 0 #ce6c8b}.buttons{display:flex;flex-wrap:wrap;justify-content:center;gap:14px}.btn.alt{background:#b7a5e8;box-shadow:0 6px 0 #9480c9}.art{font-size:6rem;line-height:1.2;filter:drop-shadow(0 8px 8px #d58aa522)}
+.road{height:110px;width:100%;position:relative;overflow:hidden;background:#f4e8e3;border-radius:18px;border-bottom:7px solid #d6c3bf}.road:after{content:"";position:absolute;left:0;right:0;top:57px;border-top:4px dashed #fffdf8}.car{position:absolute;z-index:2;width:132px;height:54px;animation:drive 4.5s linear infinite;top:8px;filter:drop-shadow(0 4px 3px #775c6022)}.car.two{top:47px;animation-duration:5.5s;animation-delay:-2s;width:112px;height:46px}.sparkles{position:absolute;inset:0;pointer-events:none}.heart{position:fixed;bottom:-30px;animation:float 3s ease-in forwards;pointer-events:none;font-size:24px}@keyframes drive{from{left:-22%}to{left:110%}}@keyframes appear{from{opacity:0;transform:translateY(10px) scale(.98)}to{opacity:1;transform:none}}@keyframes float{to{transform:translateY(-110vh) rotate(25deg);opacity:0}}@media(max-height:650px){.card{min-height:90vh;padding:20px}.art{font-size:4.5rem}.road{height:85px}.message{font-size:1.4rem}}
+</style></head>
+<body><main class="card" aria-live="polite">
+<section class="screen active" id="s1"><div class="hello">Hello Sibby ❤️</div><p class="sub">I made a little something for you…</p><button class="btn" onclick="show(2)">Click me 💌</button></section>
+<section class="screen" id="s2"><div class="road" aria-label="Audi cars passing by">
+<svg class="car" viewBox="0 0 180 72" role="img" aria-label="Red Audi-style car with four-ring badge">
+  <path d="M17 45 L26 32 Q31 28 48 26 L66 12 Q72 8 91 9 L119 13 Q128 15 139 31 L157 37 Q165 40 166 49 L162 55 L19 55 Q12 53 17 45Z" fill="#c93443" stroke="#812632" stroke-width="2"/>
+  <path d="M52 27 L70 14 Q74 12 91 13 L112 16 L126 30Z" fill="#dff2f5" stroke="#812632" stroke-width="2"/>
+  <path d="M77 15 L75 29 M113 17 L121 30" stroke="#9ebfc8" stroke-width="2"/>
+  <path d="M23 39 L38 36 M145 37 L157 42" stroke="#ffe9a8" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="45" cy="54" r="12" fill="#34313a"/><circle cx="45" cy="54" r="6" fill="#c6c8ce"/><circle cx="139" cy="54" r="12" fill="#34313a"/><circle cx="139" cy="54" r="6" fill="#c6c8ce"/>
+  <g fill="none" stroke="#f6f6f6" stroke-width="2.6"><circle cx="81" cy="39" r="5.5"/><circle cx="91" cy="39" r="5.5"/><circle cx="101" cy="39" r="5.5"/><circle cx="111" cy="39" r="5.5"/></g>
+</svg>
+<svg class="car two" viewBox="0 0 180 72" role="img" aria-label="Lavender Audi-style car with four-ring badge">
+  <path d="M17 45 L26 32 Q31 28 48 26 L66 12 Q72 8 91 9 L119 13 Q128 15 139 31 L157 37 Q165 40 166 49 L162 55 L19 55 Q12 53 17 45Z" fill="#9b86c9" stroke="#65518f" stroke-width="2"/>
+  <path d="M52 27 L70 14 Q74 12 91 13 L112 16 L126 30Z" fill="#e6f5f5" stroke="#65518f" stroke-width="2"/>
+  <path d="M77 15 L75 29 M113 17 L121 30" stroke="#9ebfc8" stroke-width="2"/>
+  <path d="M23 39 L38 36 M145 37 L157 42" stroke="#fff0bb" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="45" cy="54" r="12" fill="#34313a"/><circle cx="45" cy="54" r="6" fill="#c6c8ce"/><circle cx="139" cy="54" r="12" fill="#34313a"/><circle cx="139" cy="54" r="6" fill="#c6c8ce"/>
+  <g fill="none" stroke="#f6f6f6" stroke-width="2.6"><circle cx="81" cy="39" r="5.5"/><circle cx="91" cy="39" r="5.5"/><circle cx="101" cy="39" r="5.5"/><circle cx="111" cy="39" r="5.5"/></g>
+</svg></div><div class="message">I know I've been a little crazy on you…</div><button class="btn" onclick="show(3)">Click me 💗</button></section>
+<section class="screen" id="s3"><div class="art" role="img" aria-label="Cute bunny">🐰💗</div><div class="message">I apologise for that 🥺</div><p class="sub">I really didn't mean to upset you.</p><button class="btn" onclick="show(4)">Click me 🥹</button></section>
+<section class="screen" id="s4"><div class="art">🐰💕</div><div class="message">I miss you. Can we please be friends again?</div><div class="buttons"><button class="btn" onclick="yay()">Yes 💗</button><button class="btn alt" onclick="yay()">Yes 🥹</button></div></section>
+<section class="screen" id="s5"><div class="art">🐰💖🐰</div><div class="hello" style="font-size:2.6rem">YAY!! 💕</div><div class="message">You just made me so happy!</div><p class="sub">Sending you the biggest virtual hug 🤗</p><button class="btn" onclick="show(1)">Replay ↻</button></section>
+</main><script>
+function show(n){document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));document.getElementById('s'+n).classList.add('active')}
+function yay(){show(5);for(let i=0;i<28;i++){let h=document.createElement('span');h.className='heart';h.textContent=['💗','💕','💖','💞','❤️'][Math.floor(Math.random()*5)];h.style.left=Math.random()*100+'vw';h.style.animationDelay=Math.random()*1.2+'s';h.style.fontSize=(18+Math.random()*22)+'px';document.body.appendChild(h);setTimeout(()=>h.remove(),4300)}}
+</script></body></html>
