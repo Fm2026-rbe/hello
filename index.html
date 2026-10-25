@@ -71,11 +71,40 @@ button:hover {
   font-size: 0.95rem;
 }
 
-.cute{
+.cute {
+  width: 180px;
+  height: auto;
+  position: relative;
+  left: -40px;
+  top: 20px;
+}  
+
+.kiss {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.kiss img {
   width: 150px;
   height: auto;
-  object-fit: contain;
+}
+
+.yoda {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.yoda img {
+  width: 180px;
+  height: auto;
 }  
+  
+  
+  
 
 /* Animated cars */
 
@@ -226,7 +255,7 @@ button:hover {
   <h1>I apologise...</h1>
   <p>I know the hulk in me acted up, I'm not proud of that😒</p>
   <p class="small">I don't want things to be this way..</p>
-<div class="cute"> <img src="hulk.png" alt="Hulk" class="cute"></div>
+<div class="cute"> <img src="hulk.jpg" alt="Hulk" class="cute"></div>
 <button onclick="showPage(4)">Continue 🥺</button>
 </section>
 
@@ -236,16 +265,15 @@ button:hover {
  
   <div class="road">
     <div class="car red">
-      <span class="audi"><span class="rings">○○○○</span>AUDI</span>
+      <span class="audI"><span class="rings">○○○○</span>AUDI</span>
     </div>
     <div class="car black">
-      <span class="audi"><span class="rings">○○○○</span>AUDI</span>
+      <span class="RS3"><span class="rings">○○○○</span>AUDI</span>
     </div>
   </div>
 
   <p>I appreciate your efforts and I'm trying my best too</p>
   <p>I want to be there for you through the ups and down</p>
-  <div class="cute"> <img src="kiss.jpg" alt="Bunny" class="cute"></div>
   <button onclick="showPage(5)">Next 🍑</button>
 </section>
 
@@ -255,6 +283,7 @@ button:hover {
   <h1>I miss you</h1>
   <p>Can we please be friends again?</p>
   <p style="margin-top: 5px;">👉👈</p>
+<div class="kiss"> <img src="kiss.jpg" alt="kiss" class="cute"></div>  
   <p>(I don't have many friends and you'r my bestfriend😔)</p>
 
   <div>
@@ -274,11 +303,9 @@ button:hover {
 
 <!-- PAGE 7 -->
 <section class="page" id="page7">
-  <div class="art">💏</div>
-  <h1>Hehehe</h1>
   <p>We can talk now?</p>
   <h1>Ly x</h1>
-  <div class="cute"> <img src="yoda.jpg" alt="Bunny" class="cute"></div>
+  <div class="yoda"> <img src="yoda.jpg" alt="Yoda"></div>
   <button onclick="showPage(1)">Start again</button>
 </section>
 
