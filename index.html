@@ -16,7 +16,7 @@ body {
   min-height: 100vh;
   font-family: Arial, sans-serif;
   background: linear-gradient(135deg, #800000, #5C001F);
-  color: #4B2E1F;
+  color:  #FFFFFF;
   text-align: center;
   overflow-x: hidden;
 }
@@ -70,6 +70,12 @@ button:hover {
 .small {
   font-size: 0.95rem;
 }
+
+.cute{
+  width: 150px;
+  height: auto;
+  object-fit: contain;
+}  
 
 /* Animated cars */
 
@@ -152,6 +158,7 @@ button:hover {
   letter-spacing: -3px;
   line-height: 12px;
 }
+  
 
 @keyframes drive {
   from {
@@ -190,6 +197,7 @@ button:hover {
 <!-- PAGE 1 -->
 <section class="page active" id="page1">
   <div class="art">💌</div>
+  <div class="cute"> <img src="batman.jpg" alt="Bunny" class="cute"></div>
   <h1>Hello Sibby </h1>
   <p>I wanted to say something so I made this for you...</p>
   <button onclick="showPage(2)">Continue 💗</button>
@@ -218,13 +226,14 @@ button:hover {
   <h1>I apologise...</h1>
   <p>I know the hulk in me acted up, I'm not proud of that😒</p>
   <p class="small">I don't want things to be this way..</p>
-  <button onclick="showPage(4)">Continue 🥺</button>
+<div class="cute"> <img src="hulk.png" alt="Hulk" class="cute"></div>
+<button onclick="showPage(4)">Continue 🥺</button>
 </section>
 
 <!-- PAGE 4 -->
 <section class="page" id="page4">
   <h1> I know you're trying your best </h1>
-
+ 
   <div class="road">
     <div class="car red">
       <span class="audi"><span class="rings">○○○○</span>AUDI</span>
@@ -236,7 +245,7 @@ button:hover {
 
   <p>I appreciate your efforts and I'm trying my best too</p>
   <p>I want to be there for you through the ups and down</p>
-  <div class="art">🫰💙</div>
+  <div class="cute"> <img src="kiss.jpg" alt="Bunny" class="cute"></div>
   <button onclick="showPage(5)">Next 🍑</button>
 </section>
 
@@ -269,7 +278,7 @@ button:hover {
   <h1>Hehehe</h1>
   <p>We can talk now?</p>
   <h1>Ly x</h1>
-  <div class="art">💋😘</div>
+  <div class="cute"> <img src="yoda.jpg" alt="Bunny" class="cute"></div>
   <button onclick="showPage(1)">Start again</button>
 </section>
 
